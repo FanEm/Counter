@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var counterButton: UIButton!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var counterButton: UIButton!
     
     private var counter: Int = 0
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func buttonDidTap() {
+    @IBAction private func buttonDidTap() {
         counter += 1
         counterLabel.text = "Значение счётчика: \(counter)"
     }
